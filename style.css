@@ -100,7 +100,7 @@ button {
 .intro h1
 margin: 0;
 color: #fff9ed;
-font-family: "DM Serif Display", geogia, serif;
+font-family: "DM Serif Display", Georgia, serif;
 font-size: clamp(42px, 10vw, 54px);
 font-weight: 400;
 letter-spacing: -.035em;
@@ -218,7 +218,7 @@ line-height: 1;
   background: linear-gradient(to right, #dca44e var(--progress), #454038 var(--progress));
 }
 
-.progress:: -webkit-slider-thumb {
+.progress::-webkit-slider-thumb {
   width: 12px;
   height: 12px;
   appearance: none;
