@@ -1,73 +1,74 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=divice-width, initial-scale=1.0">
-<meta name="description" content="Portofolio Raka">
-<title>Raka- Portofolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Raka">
+  <title>Raka - Portofolio</title>
   
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="htps://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;family=Manrope:wght@400;500;600&display=swap>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display&family=Manrope:wght@400;500;600&display=swap">
 
-  <link rel="stylesheet" href=style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-  <body>
-    <main class="page">
-      <div class="glow"></div>
-  <section class="portofolio" aria-labelledby="name>
-    <p class="eyebrow">Portofolio pribadi</p>
+<body>
+  <main class="page">
+    <div class="glow"></div>
     
-    <div class="profile photo">
-      <img src="foto-profil.jpg" alt="Potret Raka">
-      <span class="online-dot" title="Sedang online"></span>
-    </div>
+    <section class="portofolio" aria-labelledby="name">
+      <p class="eyebrow">Portofolio pribadi</p>
+      
+      <div class="profile-photo">
+        <img src="foto-profil.jpg" alt="Potret Raka">
+        <span class="online-dot" title="Sedang online"></span>
+      </div>
 
-    <header class="intro"
-      <h1 id="name">Raka</h1>
-      <p class="role">Belajar coding &amp; belajar lebih dalam soal AI</p>
-      <p class="bio">Saya membuat website ini untuk coba coba</p>
+      <header class="intro">
+        <h1 id="name">Raka</h1>
+        <p class="role">Belajar coding &amp; belajar lebih dalam soal AI</p>
+        <p class="bio">Saya membuat website ini untuk coba-coba</p>
       </header>
 
-    <ul class="skills">
-      <li>Bernafas</li>
-      <li>Lancar berjalan</li>
-    </ul>
-    
-    <section class="music-player" aria-label="putar musik">
-      <div class="player-heading">
-        <span>Now playing</span>
-        <span class="live-status">😎<span id="status">Jeda</span></span>
-      </div>
-
-      <div class="song-info">
-        <dic class="vinly" id="vinly"><span></span></div>
-        <div>
-          <a id="link" target="_blank" rel="noopener"><h2 id="title">Golden Hour</h2></a>
-          <p id+"artist">JKVE</p>
+      <ul class="skills">
+        <li>Bernafas</li>
+        <li>Lancar berjalan</li>
+      </ul>
+      
+      <section class="music-player" aria-label="Putar musik">
+        <div class="player-heading">
+          <span>Now playing</span>
+          <span class="live-status">😎 <span id="status">Jeda</span></span>
         </div>
-     </div>
 
-  <input class="progress" id="progress" type="range" min="0" max="209" value="0" aria-label="Posisi lagu">
-      <div class="time row">
-        <span id="now">0:00</span>
-        <span id="left">-3:29</span>
-      </div>
+        <div class="song-info">
+          <div class="vinyl" id="vinyl"><span></span></div>
+          <div>
+            <a id="link" target="_blank" rel="noopener"><h2 id="title">Golden Hour</h2></a>
+            <p id="artist">JVKE</p>
+          </div>
+        </div>
 
-      <div class="controls">
-        <button class="icon-button" id="prev" type="button" aris-label="Lagu sebelumnya">⏪</button>
+        <input class="progress" id="progress" type="range" min="0" max="209" value="0" aria-label="Posisi lagu">
+        
+        <div class="timerow">
+          <span id="now">0:00</span>
+          <span id="left">-3:29</span>
+        </div>
+
+        <div class="controls">
+          <button class="icon-button" id="prev" type="button" aria-label="Lagu sebelumnya">⏪</button>
           <button class="play-button" id="play" type="button">▶ <span>Putar</span></button>
-          <button class="icon-button" id="next" type="button" aris-label="Lagu berikutnya">⏩</button>
-      </div>
+          <button class="icon-button" id="next" type="button" aria-label="Lagu berikutnya">⏩</button>
+        </div>
 
-      <div class="song-list aria-label="Darfta Lagu"></div>
+        <div class="song-list" aria-label="Daftar Lagu"></div>
+      </section>
+
+      <p class="footer-note">Dibuat oleh saya ~Raka.</p>
     </section>
+  </main>
 
-    <p class="footer-note">Dibuat oleh saya ~Raka.</p>
-  </section>
-    </main>
-
-    <script type="module" src="script.js"></script>
-  </body>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
