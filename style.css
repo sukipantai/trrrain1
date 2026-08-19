@@ -1,5 +1,5 @@
 :root {
-  font-family: Manrope, Arial, sans-serify;
+  font-family: Manrope, Arial, sans-serif;
   color: #f3ede1;
   background: #11100f;
   font-synthesis: none;
@@ -11,7 +11,7 @@ html {
 
 body {
   min-width: 320px;
-  min-heigth: 100hv;
+  min-heigth: 100vh;
   margin: 0;
   background: #11100f;
 }
@@ -54,10 +54,10 @@ button {
 }
 
 .eyebrow, .player-heading, .role, .footer-note {
-  margn: 0;
+  margin: 0;
   font-family: "DM Mono", monospace;
   letter-spacing: .12em;
-  text-tansform: uppercase;
+  text-transform: uppercase;
 }
 
 .eyebrow {
@@ -69,7 +69,7 @@ button {
 .profile-photo {
   position: relative;
   width: 156px;
-  heigth: 156px;
+  height: 156px;
   margin: 0 auto 28px;
   border: 1px solid #ffffff29;
   border-radius: 50%;
@@ -90,14 +90,14 @@ button {
   right: 10px;
   bottom: 9px;
   width: 13px;
-  weight: 13px;
-  boerder: 2px solid #11100f;
+  height: 13px;
+  border: 2px solid #11100f;
   border-radius: 50%;
   background: #78c889;
   box-shadow: 0 0 0 11px #78c889cc;
 }
 
-.intro h1
+.intro h1 {
 margin: 0;
 color: #fff9ed;
 font-family: "DM Serif Display", Georgia, serif;
@@ -150,7 +150,7 @@ line-height: 1;
 
 .player-heading, .timerow {
   display: flex;
-  justifiy-content: space-between;
+  justify-content: space-between;
   color: #8e887d;
   font-size: 9px:
 }
@@ -161,7 +161,7 @@ line-height: 1;
 
 .song-info {
   display: flex;
-  align-items: center:
+  align-items: center;
   gap: 15px;
   margin: 20px 0;
 }
@@ -304,7 +304,7 @@ line-height: 1;
  margin: 28px 0 0;
   color: #625d55;
   font-size: 9px;
-  ]
+}
 
   @keyframes spin {
     to { transform: rotate(360deg); }
@@ -312,8 +312,8 @@ line-height: 1;
 
   @keyframes appear {
     from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; trasform: translatey(0); }
-    ]
+    to { opacity: 1; trasform: translateY(0); }
+  }
 
     @media (max-width: 420px) {
     .page { padding: 38px 16px; }
