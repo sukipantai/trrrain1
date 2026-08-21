@@ -1,7 +1,7 @@
 const songs = [
   ["Golden Hour", "JVKE", 209, "Golden Hour.mp3"],
-  ["Cellings", "Lizzy McAlpine", 194, "Cellings".mp3"],
-  ["Death Bed", "Powfu ft. beabadoobee", 173, "Dead Bed.mp3"],
+  ["Cellings", "Lizzy McAlpine", 194, "Cellings.mp3"],
+  ["Death Bed", "Powfu ft. beabadoobee", 173, "Death Bed.mp3"],
 ];
 
 const $ = (id) => document.querySelector(id);
@@ -22,23 +22,23 @@ let currentSongIndex = 0;
 let isPlaying = false;
 
 const formatTime = (seconds) => {
-  if ((isNaN(seconds)) return "0:00";
-  const minutes = Math.floor(seconds / 60;
+  if (isNaN(seconds)) return "0:00";
+  const minutes = Math.floor(seconds / 60);
   const secs = String(Math.floor(seconds % 60)).padStart(2, "0");
-  return `${minutes}:${secs]`;
+  return `${minutes}:${secs}`;
 };
 
 function updateUI() {
   const [name, singer, duration, audioFile] = songs[currentSongIndex];
 
-title.textcontent = name;
-artist.textcontent = singer;
+title.textContent = name;
+artist.textContent = singer;
 
 link.removeAttribute("href");
 link.style.cursor = "default";
 
 list.innerHTML = songs.map((songData, index) => {
-  const isActive = index === currentsongIndex ? "active" : "";
+  const isActive = index === currentSongIndex ? "active" : "";
   return `
   <a class="song-item ${isActive}" data-song="${index}" href="javascript:void(0);">
     <span>0${index + 1}</span>
@@ -90,7 +90,7 @@ audio.addEventListener("timeUpdate", () => {
   bar.style.setProperty("--progress", `${percent}%`);
 
   now.textContent = formatTime(currentTime);
-  left.textContent = `-${formatTime(duration - currenttime)}`;
+  left.textContent = `-${formatTime(duration - currentTime)}`;
 });
 
 audio.addEventListener("ended", () => {
