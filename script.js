@@ -49,7 +49,7 @@ list.innerHTML = songs.map((songData, index) => {
 }).join("");
 
 status.textContent = isPlaying ? "Memutar" : "Jeda";
-playBtn.innerHTML = isPlaying ? "Ⅱ <span>Jeda</span>" : "▶ <span>Putar</span>
+playBtn.innerHTML = isPlaying ? "<span>Jeda</span>" : "<span>Putar</span>
 vinyl.classList.toggle("is-spinning", isPlaying);
 }
 
