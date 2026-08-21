@@ -80,10 +80,10 @@ isPlaying = !isPlaying;
   updateUI();
 }
 
-audio.addEventListener("timeUpdate", () => {
+audio.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
   const duration = songs[currentSongIndex][2];
-  const percent = (currenttime / duration) * 100;
+  const percent = (currentTime / duration) * 100;
 
   bar.max = duration;
   bar.value = currentTime;
