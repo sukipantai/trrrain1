@@ -90,7 +90,7 @@ audio.addEventListener("timeUpdate", () => {
   bar.value = currentTime;
   bar.style.setProperty("--progress", `${percent}%`);
 
-                       now.textContent = formatTime(currentTime);
+  now.textContent = formatTime(currentTime);
   left.textContent = `-${formatTime(duration - currenttime)}`;
 });
 
