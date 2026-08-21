@@ -1,6 +1,6 @@
 const songs = [
   ["Golden Hour", "JVKE", 209, "Golden Hour.mp3"],
-  ["Cellings", "Lizzy McAlpine", 194, "Cellings.mp3"],
+  ["Ceilings", "Lizzy McAlpine", 194, "Ceilings.mp3"],
   ["Death Bed", "Powfu ft. beabadoobee", 173, "Death Bed.mp3"],
 ];
 
@@ -49,7 +49,7 @@ list.innerHTML = songs.map((songData, index) => {
 }).join("");
 
 status.textContent = isPlaying ? "Memutar" : "Jeda";
-playBtn.innerHTML = isPlaying ? "Ⅱ<span>Jeda</span>" : "▶<span>Putar</span>";
+playBtn.innerHTML = isPlaying ? "Ⅱ <span>Jeda</span>" : "▶ <span>Putar</span>";
 vinyl.classList.toggle("is-spinning", isPlaying);
 }
 
