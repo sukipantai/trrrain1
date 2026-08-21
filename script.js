@@ -41,6 +41,77 @@ list.innerHTML = songs.map((songData, index) => {
   const isActive = index === currentsongIndex ? "active" : "";
   return `
   <a class="song-item ${isActive}" data-song="${index}" href="javascript:void(0);">
-  <span>0${index + 1}</span>
-  <span>${songData[0]}</span>
-  <span.
+    <span>0${index + 1}</span>
+    <span>${songData[0]}</span>
+    <span>▶</span>
+  </a>
+`;
+}).join("");
+
+status.textContent = isPlaying ? "Memutar" : "Jeda";
+playBtn.innerHTML = isPlaying ? "Ⅱ <span>Jeda</span> : "▶ <span>Putar</span>";
+vinyl.classList.toggle("is-spinning", isPlaying);
+}
+
+function changeSong(index) {
+  currentSongIndex = index;
+  const audioFile = songs[currentSongIndex][3];
+  
+  audio.src = audioFile;
+
+isPlaying = true;
+  audio.play();
+
+updateUI();
+}
+
+function togglePlay() {
+
+if (!audio.src) {
+  audio.src = songs[currentSongIndex][3];
+}
+
+if (isPlaying) {
+  audio.pause();
+} else {
+  audio.play();
+}
+
+isPlaying = !isPlaying;
+  updateUI();
+}
+
+audio.addEventListener("timeUpdate", () => {
+  const currentTime = audio.currentTime;
+  const duration = songs[currentSongIndex][2];
+  const percent = (currenttime / duration) * 100;
+
+  bar.max = duration;
+  bar.value = currentTime;
+  bar.style.setProperty("--progress", `${percent}%`);
+
+                       now.textContent = formatTime(currentTime);
+  left.textContent = `-${formatTime(duration - currenttime)}`;
+});
+
+audio.addEventListener("ended", () => {
+  changeSong((currentSongIndex + 1) % songs.length);
+});
+
+playBtn.onclick = togglePlay;
+$("#next").onclick = () => changeSong((currentSongIndex + 1) % songs.length);
+$("#prev").onclick = () => changeSong((currentSongIndex + songs.length - 1) % songs.length);
+
+bar.oninput = () => {
+  audio.currentTime = Number(bar.value);
+  updateUI();
+};
+
+list.onclick = (event) => {
+  const item = event.target.closest("[data-song]");
+  if (item) {
+    changeSong(Number(item.dataset.song));
+  }
+};
+
+updateUI();
