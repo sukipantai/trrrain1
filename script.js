@@ -32,7 +32,7 @@ function updateUI() {
   const [name, singer, duration, audioFile] = songs[currentSongIndex];
 
 title.textcontent = name;
-  artist.textcontent = singer;
+artist.textcontent = singer;
 
 link.removeAttribute("href");
 link.style.cursor = "default";
@@ -59,14 +59,13 @@ function changeSong(index) {
   
   audio.src = audioFile;
 
-isPlaying = true;
-  audio.play();
+ isPlaying = true;
+ audio.play();
 
-updateUI();
+ updateUI();
 }
 
 function togglePlay() {
-
 if (!audio.src) {
   audio.src = songs[currentSongIndex][3];
 }
